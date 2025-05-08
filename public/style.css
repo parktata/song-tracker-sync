@@ -1,0 +1,120 @@
+/* 기본 레이아웃 */
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f2f5;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 카드 공통 */
+.login-card, .app-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 0 16px;
+}
+
+/* 로그인 헤더 */
+.login-header {
+  background: #4285f4;
+  padding: 16px;
+  text-align: center;
+}
+.login-header .logo {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 로그인 본문 */
+.login-body {
+  padding: 24px;
+  text-align: center;
+}
+.description {
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* 앱 카드 내부 */
+.app-card {
+  padding: 24px;
+}
+.app-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* textarea */
+#titles-input {
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 14px;
+}
+
+/* 버튼 기본 */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 구글 로그인 */
+.google-btn {
+  background: #4285f4;
+  color: #fff;
+}
+.google-btn:hover {
+  background: #357ae8;
+}
+
+/* 등록 버튼 */
+.primary-btn {
+  background: #6c63ff;
+  color: #fff;
+}
+.primary-btn:hover {
+  background: #5a54d1;
+}
+
+/* 로그아웃 버튼 */
+.secondary-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+.secondary-btn:hover {
+  background: #cfcfcf;
+}
+
+/* 결과 메시지 */
+#result {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+/* 곡 목록 */
+#song-list {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+#song-list li {
+  margin-bottom: 4px;
+}
