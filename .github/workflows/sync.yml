@@ -2,8 +2,8 @@ name: Sync Melon Covers
 
 on:
   schedule:
-    - cron: '0 */12 * * *'   # 매 12시간마다 실행
-  workflow_dispatch:        # 수동 실행 지원
+    - cron: '0 */12 * * *'   # 매 12시간마다
+  workflow_dispatch:        # 수동 실행 허용
 
 jobs:
   sync:
@@ -18,11 +18,12 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: functions
         run: npm ci
 
       - name: Create service account key file
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > serviceAccountKey.json
+        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}" > serviceAccountKey.json
 
       - name: Run sync script
+        working-directory: functions
         run: node sync.js
